@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <main>
+    <div class="containerCards">
+      <div class="cardFront">
+        <img src="./images/bg-card-front.png" class="frontCard" alt="card front" >
+        <div class="frontCardTextContainer">
+          <img src="./images/card-logo.svg" alt="logo" id="logoImg"> 
+          <p class="cardNumber">1234 5678 9123 0000</p>
+          <div class="cardDetails">
+            <p class="cardName">Zulkifal Shakaib</p>
+            <p><span class="expiryMonth">00</span>/<span class="expiryYear">00</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="cardBack">
+        <img src="./images/bg-card-back.png" class="backCard" alt="card back">
+        <div class="backCardTextContainer">
+          <p class="cardCvc">000</p>
+        </div>
+
+      </div>
+    </div>
+    
+   
+    <div class="container">
+      <div class="formContainer">
+        <form>
+          <label for="cardHolder">CARDHOLDER NAME</label>
+          <input type="text" name="cardHolder" placeholder="e.g. Zulkifal Shakaib" id="cardHolder" required>
+          <p class="err errCardHolder">Please enter a valide name</p>
+          <label for="cardNum">CARD NUMBER</label>
+          <input type="text" value="" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" minlength="16" name="cardNum" id="cardNum" required>
+          <p class="err errCardNum">Wrong format, numbers only</p>
+          <div class="validation">
+            <div class="expDate">
+              <label for="expDate">EXP. DATE (MM/YY)</label>
+              <div>
+                <input type="text" name="expDate" maxlength="2" id="expMonth" placeholder="MM" required>
+                <input type="text" name="expDate" maxlength="2" id="expYear" placeholder="YY" required>
+              </div>
+              <p class="err errExpDate">Please enter digits only</p>
+            </div>
+            <div class="cvc">
+              <label for="cvc">CVC</label>
+              <input type="text" maxlength="3" minlength="3" placeholder="123" id="cvc" required>
+              <p class="err errCvc">Please enter digits only</p>
+            </div>
+          </div>
+          <input type="submit" value="Confirm" id="confirm" class="btn">
+        </form>
+      </div>
+      <div class="doneContainer"  style="display: none;">
+        <img src="./images/icon-complete.svg" alt="complete icon">
+        <h3>THANK YOU !</h3>
+        <p>We've added your card details</p>
+        <input type="submit" value="Continue" class="btn" id="btnContinue">
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

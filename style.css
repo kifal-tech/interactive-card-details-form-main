@@ -1,0 +1,202 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Space Grotesk', sans-serif;
+}
+main{
+  background: url(./images/bg-main-desktop.png) no-repeat;
+  background-size: contain;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container{
+  max-width: 380px;
+}
+.cardFront, 
+.cardBack{
+  position: relative;
+  text-transform: uppercase;
+
+}
+
+.frontCardTextContainer{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  padding: 20px;
+  color: white;
+  font-size: 2rem;
+}
+#logoImg{
+  margin-bottom: 5rem;
+}
+
+.cardBack{
+  padding-top: 2rem;
+  padding-left: 5rem;
+}
+.cardDetails{
+  display: flex;
+  font-size: 1rem;
+  margin-top:0.4rem;
+  justify-content: space-between
+}
+
+.backCardTextContainer{
+  position: absolute;
+  top: 50%;
+  right:10%;
+  color: white;
+  font-size: 1.2rem;
+
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+.validation{
+  display: flex;
+  flex-direction:row;
+}
+.expDate,
+.cvc{
+  display: flex;
+  flex-direction: column;
+}
+.cvc{
+  padding-left: 0.5rem
+}
+form input[type="text"]{
+  padding: .6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid hsl(270, 3%, 87%);
+ 
+
+}
+form input[type="text"]:hover{
+  border-color: hsl(249, 99%, 64%);
+}
+form input[type="text"]:focus{
+  outline: none;
+  border-color: hsl(278, 94%, 30%);
+}
+form label{
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  margin-bottom: .3rem;
+  margin-top: 1rem;
+}
+#expMonth,
+#expYear{
+  width: 75px;
+  
+}
+.err{
+  padding-top: .4rem;
+  font-size: .7rem;
+  color: red;
+}
+.btn{
+  padding: 1rem;
+  color: white;
+  border-radius: 5px;
+  margin-top: 1rem;
+  background-color: hsl(278, 68%, 11%);
+  cursor: pointer;
+}
+.doneContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.3rem;
+  
+}
+.doneContainer h3{
+  letter-spacing: .2rem;
+}
+.doneContainer p{
+  color: hsl(279, 6%, 55%);
+}
+.doneContainer .btn{
+  width: -webkit-fill-available;
+}
+.errCardHolder,
+.errCardNum,
+.errExpDate,
+.errCvc{
+  display: none;
+}
+.errBorder{
+  border-color: red !important;
+}
+
+@media (max-width:777px){
+  main{
+    background: url(./images/bg-main-mobile.png) no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    padding: 0 1rem;
+  }
+  .cardFront{
+    top: 8rem;
+
+    z-index: 2;
+  }
+  .cardBack {
+    top:-13rem;
+    left: 1rem;
+    z-index: 1;
+    padding-top: 0;
+    padding-left: 0;
+    padding: 0 1rem;
+  }
+  .frontCard,
+  .backCard{
+    width: -webkit-fill-available;
+  }
+  .cardDetails{
+    font-size: 0.8rem;
+  }
+  .frontCardTextContainer{
+    font-size: 1.3rem;
+    top: -0.8rem;
+    padding: 20px;
+  }
+  .backCardTextContainer{
+    font-size: 0.9rem;
+    top: 51%;
+    right: 2%;
+  }
+  #logoImg {
+    margin-bottom: 3rem;
+    width: 60px;
+  }
+  #expMonth,
+  #expYear {
+    width: 70px;
+
+  }
+  .btn{
+    margin-bottom: 2rem;
+  }
+}
